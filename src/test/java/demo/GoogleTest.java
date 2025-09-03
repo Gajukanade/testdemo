@@ -1,15 +1,21 @@
 package demo;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 public class GoogleTest {
 
     @Test
+    @Description("Verify Google title loads correctly")
+    @Severity(SeverityLevel.CRITICAL)
+    
     public void testGoogleTitle() {
         WebDriverManager.chromedriver().setup();
 

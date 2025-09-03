@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI with Maven + Allure
 
 on:
   push:
@@ -29,3 +29,9 @@ jobs:
 
       - name: Run Tests
         run: mvn test
+
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-results
+          path: target/allure-results
